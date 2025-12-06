@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Deposito 2025 | Perbandingan 15+ Bank Indonesia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1a6dcc 0%, #0a4d9c 100%);
+            --secondary-gradient: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --warning-gradient: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            --card-bg: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #333333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .year-badge {
+            display: inline-block;
+            background: var(--warning-gradient);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-left: 15px;
+            vertical-align: middle;
+            box-shadow: 0 4px 10px rgba(243, 156, 18, 0.3);
+        }
+
+        .app-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 1200px) {
+            .app-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #1a6dcc;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e9ecef;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-icon {
+            color: #1a6dcc;
+            cursor: help;
+            font-size: 0.9rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #dfe6e9;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: var(--transition);
+            background: white;
+            color: #333333;
+        }
+
+        input:focus, select:focus {
+            border-color: #1a6dcc;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 109, 204, 0.1);
+        }
+
+        .range-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        input[type="range"] {
+            flex: 1;
+            height: 8px;
+            border-radius: 4px;
+            background: #dfe6e9;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(26, 109, 204, 0.4);
+            border: 2px solid white;
+        }
+
+        .range-value {
+            min-width: 100px;
+            font-weight: 700;
+            color: #1a6dcc;
+            font-size: 1.1rem;
+            text-align: right;
+        }
+
+        .btn-calculate {
+            background: var(--secondary-gradient);
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 700;
+            transition: var(--transition);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .btn-calculate:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(46, 204, 113, 0.4);
+        }
+
+        .btn-calculate:active {
+            transform: translateY(-1px);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .result-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid;
+            transition: var(--transition);
+            border: 1px solid #e9ecef;
+        }
+
+        .result-card:nth-child(1) { border-color: #1a6dcc; }
+        .result-card:nth-child(2) { border-color: #2ecc71; }
+        .result-card:nth-child(3) { border-color: #f39c12; }
+        .result-card:nth-child(4) { border-color: #9b59b6; }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .result-label {
+            font-size: 0.9rem;
+            color: #555555;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #2c3e50;
+        }
+
+        .total-return {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .total-label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            opacity: 0.95;
+            font-weight: 600;
+        }
+
+        .total-value {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Perbaikan Chart Styles */
+        .chart-container {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e9ecef;
+        }
+
+        .chart-title {
+            font-size: 1.2rem;
+            color: #1a6dcc;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .growth-chart {
+            height: 220px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 10px 0 40px 0;
+            position: relative;
+        }
+
+        .chart-bar-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            flex: 1;
+        }
+
+        .chart-bar {
+            width: 70px;
+            background: var(--primary-gradient);
+            border-radius: 8px 8px 0 0;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            box-shadow: 0 4px 8px rgba(26, 109, 204, 0.2);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .chart-bar:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(26, 109, 204, 0.3);
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -35px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #2c3e50;
+            background: white;
+            padding: 5px 8px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dfe6e9;
+            z-index: 2;
+            min-width: 100px;
+            white-space: nowrap;
+        }
+
+        .chart-label {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 1rem;
+            color: #2c3e50;
+            font-weight: 700;
+            padding: 8px 5px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            z-index: 1;
+        }
+
+        .chart-period {
+            font-size: 0.9rem;
+            color: #666666;
+            margin-top: 5px;
+        }
+
+        /* Bank Comparison Styles */
+        .banks-section {
+            margin-top: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #1a6dcc;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+        }
+
+        .bank-filter {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #dfe6e9;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            color: #2c3e50;
+        }
+
+        .filter-btn.active {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: #1a6dcc;
+        }
+
+        .filter-btn:hover:not(.active) {
+            border-color: #1a6dcc;
+            color: #1a6dcc;
+            background: #f8f9fa;
+        }
+
+        .banks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .bank-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+        }
+
+        .bank-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: #1a6dcc;
+        }
+
+        .bank-card.selected {
+            border: 3px solid #1a6dcc;
+            box-shadow: 0 0 0 3px rgba(26, 109, 204, 0.2);
+        }
+
+        .bank-card.featured::before {
+            content: 'FAVORIT';
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background: var(--warning-gradient);
+            color: white;
+            padding: 4px 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .bank-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .bank-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bank-name-container {
+            flex: 1;
+        }
+
+        .bank-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .bank-type {
+            font-size: 0.85rem;
+            color: #555555;
+            background: #f1f8ff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 600;
+            border: 1px solid #d1e3ff;
+        }
+
+        .bank-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-label {
+            font-size: 0.85rem;
+            color: #666666;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .detail-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+
+        .detail-value.rate {
+            color: #27ae60;
+            font-size: 1.3rem;
+        }
+
+        .bank-footer {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .apply-btn {
+            background: var(--secondary-gradient);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 3px 10px rgba(46, 204, 113, 0.3);
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        }
+
+        /* Financial Recommendation Styles */
+        .financial-recommendation {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid #1a6dcc;
+            border: 1px solid #dfe6e9;
+        }
+
+        .financial-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .financial-icon {
+            color: #1a6dcc;
+            font-size: 1.8rem;
+        }
+
+        .financial-header h3 {
+            color: #1a6dcc;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .recommendation-content {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e9ecef;
+        }
+
+        .recommendation-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f1f8ff;
+        }
+
+        .recommendation-point:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .point-icon {
+            width: 40px;
+            height: 40px;
+            background: #f1f8ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a6dcc;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            border: 2px solid #d1e3ff;
+        }
+
+        .point-content h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .point-content p {
+            color: #555555;
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            color: #666666;
+            border-top: 1px solid #dfe6e9;
+            font-size: 0.9rem;
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #1a6dcc;
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 6px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: none;
+            background: #f1f8ff;
+            color: #0a4d9c;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 280px;
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -140px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.85rem;
+            font-weight: normal;
+            line-height: 1.5;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .highlight {
+            background: var(--warning-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+
+        .bank-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid #e9ecef;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+        }
+
+        .stat-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1a6dcc;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666666;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .banks-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .bank-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .app-container {
+                gap: 20px;
+            }
+            
+            .card {
+                padding: 25px;
+            }
+            
+            .chart-bar {
+                width: 50px;
+            }
+            
+            .bar-value {
+                font-size: 0.85rem;
+                min-width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <i class="fas fa-calculator"></i> 
+                Kalkulator Deposito Bank 2025
+                <span class="year-badge">PERBANDINGAN 18 BANK</span>
+            </h1>
+            <p>Analisis dan bandingkan suku bunga deposito dari berbagai bank Indonesia. Hitung keuntungan investasi Anda dengan akurat berdasarkan data terkini 2025.</p>
+        </header>
+
+        <div class="app-container">
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-sliders-h"></i> Konfigurasi Deposito</h2>
+                
+                <div class="form-group">
+                    <label for="depositAmount">
+                        Jumlah Deposito
+                        <span class="tooltip">
+                            <i class="fas fa-info-circle info-icon"></i>
+                            <span class="tooltiptext">Masukkan jumlah uang yang akan Anda depositokan. Minimum Rp 1 juta, maksimum Rp 10 miliar. Dana dijamin LPS hingga Rp 2 miliar.</span>
+                        </span>
+                    </label>
+                    <div class="range-container">
+                        <input type="range" id="depositAmountRange" min="1000000" max="10000000000" step="1000000" value="100000000">
+                        <span class="range-value" id="depositAmountValue">Rp 100,000,000</span>
+                    </div>
+                    <input type="number" id="depositAmount" min="1000000" max="10000000000" value="100000000">
+                </div>
+
+                <div class="form-group">
+                    <label for="interestRate">
+                        Suku Bunga Tahunan
+                        <span class="tooltip">
+                            <i class="fas fa-info-circle info-icon"></i>
+                            <span class="tooltiptext">Suku bunga deposito per tahun. Rata-rata nasional 2025: 4.5% - 6.5%. Klik bank di bawah untuk menggunakan rate mereka.</span>
+                        </span>
+                    </label>
+                    <div class="range-container">
+                        <input type="range" id="interestRateRange" min="3" max="10" step="0.1" value="5.5">
+                        <span class="range-value" id="interestRateValue">5.5%</span>
+                    </div>
+                    <input type="number" id="interestRate" min="3" max="10" step="0.1" value="5.5">
+                </div>
+
+                <div class="form-group">
+                    <label for="period">
+                        Jangka Waktu
+                        <span class="tooltip">
+                            <i class="fas fa-info-circle info-icon"></i>
+                            <span class="tooltiptext">Pilih jangka waktu deposito. Bunga biasanya lebih tinggi untuk periode lebih panjang. Deposito > 24 bulan cocok untuk investasi jangka panjang.</span>
+                        </span>
+                    </label>
+                    <div class="range-container">
+                        <input type="range" id="periodRange" min="1" max="36" step="1" value="12">
+                        <span class="range-value" id="periodValue">12 Bulan</span>
+                    </div>
+                    <select id="period">
+                        <option value="1">1 Bulan</option>
+                        <option value="3">3 Bulan</option>
+                        <option value="6">6 Bulan</option>
+                        <option value="12" selected>12 Bulan</option>
+                        <option value="24">24 Bulan</option>
+                        <option value="36">36 Bulan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="taxRate">
+                        Tarif Pajak (Final)
+                        <span class="tooltip">
+                            <i class="fas fa-info-circle info-icon"></i>
+                            <span class="tooltiptext">Pajak atas bunga deposito. Untuk NPWP aktif: 20%, tanpa NPWP: 30%. Pajak khusus 10% berlaku untuk deposito tertentu.</span>
+                        </span>
+                    </label>
+                    <select id="taxRate">
+                        <option value="0">0% (Dibebaskan Pajak)</option>
+                        <option value="10">10% (Khusus)</option>
+                        <option value="20" selected>20% (Normal dengan NPWP)</option>
+                        <option value="30">30% (Tanpa NPWP)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="compounding">
+                        Frekuensi Bunga
+                        <span class="tooltip">
+                            <i class="fas fa-info-circle info-icon"></i>
+                            <span class="tooltiptext">Pilih bagaimana bunga dihitung dan dibayarkan. Bunga majemuk memberikan hasil lebih tinggi karena bunga berbunga.</span>
+                        </span>
+                    </label>
+                    <select id="compounding">
+                        <option value="simple">Bunga Tunggal (Dibayar di Akhir)</option>
+                        <option value="monthly" selected>Bunga Majemuk Bulanan</option>
+                        <option value="quarterly">Bunga Majemuk 3 Bulanan</option>
+                        <option value="annually">Bunga Majemuk Tahunan</option>
+                    </select>
+                </div>
+
+                <button class="btn-calculate" id="calculateBtn">
+                    <i class="fas fa-calculator"></i> HITUNG KEUNTUNGAN DEPOSITO
+                </button>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-chart-bar"></i> Hasil Perhitungan</h2>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-label"><i class="fas fa-wallet"></i> Investasi Awal</div>
+                        <div class="result-value" id="resultDeposit">Rp 100,000,000</div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-label"><i class="fas fa-percentage"></i> Bunga Per Tahun</div>
+                        <div class="result-value" id="resultAnnualInterest">Rp 5,500,000</div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-label"><i class="fas fa-calendar-alt"></i> Total Bunga (Kotor)</div>
+                        <div class="result-value" id="resultTotalInterest">Rp 5,500,000</div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-label"><i class="fas fa-receipt"></i> Pajak Dipotong</div>
+                        <div class="result-value" id="resultTax">Rp 1,100,000</div>
+                    </div>
+                </div>
+
+                <div class="total-return">
+                    <div class="total-label">Total Nilai Investasi di Akhir Periode</div>
+                    <div class="total-value" id="resultTotalReturn">Rp 104,400,000</div>
+                    <div style="font-size: 1.1rem; font-weight: 600;">Keuntungan Bersih: <span class="highlight" id="netProfit">Rp 4,400,000</span></div>
+                </div>
+
+                <!-- Chart Container yang Diperbaiki -->
+                <div class="chart-container">
+                    <h3 class="chart-title"><i class="fas fa-chart-line"></i> Perkembangan Nilai Deposito</h3>
+                    <div class="growth-chart" id="growthChart">
+                        <!-- Chart bars will be generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bank Statistics -->
+        <div class="bank-stats">
+            <div class="stat-item">
+                <div class="stat-value" id="avgRate">5.65%</div>
+                <div class="stat-label">Rata-rata Bunga Nasional</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="highestRate">5.8%</div>
+                <div class="stat-label">Bunga Tertinggi</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="lowestRate">4.8%</div>
+                <div class="stat-label">Bunga Terendah</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="bankCount">18</div>
+                <div class="stat-label">Bank Tersedia</div>
+            </div>
+        </div>
+
+        <!-- Bank Comparison Section -->
+        <div class="banks-section">
+            <h2 class="section-title"><i class="fas fa-university"></i> Perbandingan Suku Bunga Bank 2025</h2>
+            
+            <div class="bank-filter">
+                <button class="filter-btn active" data-filter="all">Semua Bank</button>
+                <button class="filter-btn" data-filter="digital">Bank Digital</button>
+                <button class="filter-btn" data-filter="konvensional">Bank Konvensional</button>
+                <button class="filter-btn" data-filter="syariah">Bank Syariah</button>
+                <button class="filter-btn" data-filter="bumn">Bank BUMN</button>
+            </div>
+            
+            <div class="banks-grid" id="banksGrid">
+                <!-- Bank cards will be generated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Financial Recommendation Section -->
+        <div class="financial-recommendation">
+            <div class="financial-header">
+                <i class="fas fa-chart-line financial-icon"></i>
+                <h3>Rekomendasi Keuangan untuk Investasi Anda</h3>
+            </div>
+            
+            <div class="recommendation-content">
+                <div class="recommendation-point">
+                    <div class="point-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="point-content">
+                        <h4>Strategi Bunga Optimal</h4>
+                        <p id="rateRecommendation">Berdasarkan data 18 bank Indonesia tahun 2025, deposito dengan jangka waktu 12 bulan memberikan keseimbangan terbaik antara likuiditas dan imbal hasil. Bank digital menawarkan rate rata-rata 5.8%, lebih tinggi dari bank konvensional (5.1%).</p>
+                    </div>
+                </div>
+                
+                <div class="recommendation-point">
+                    <div class="point-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="point-content">
+                        <h4>Perencanaan Jangka Waktu</h4>
+                        <p id="periodRecommendation">Untuk kebutuhan dana darurat, pilih deposito 1-3 bulan. Untuk tujuan investasi menengah (1-2 tahun), pilih 12 bulan. Untuk investasi jangka panjang dengan imbal hasil maksimal, pertimbangkan 24-36 bulan dengan bunga lebih tinggi.</p>
+                    </div>
+                </div>
+                
+                <div class="recommendation-point">
+                    <div class="point-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="point-content">
+                        <h4>Manajemen Risiko</h4>
+                        <p id="riskRecommendation">Selalu pastikan bank pilihan Anda merupakan peserta penjaminan LPS (Lembaga Penjamin Simpanan) dengan limit jaminan Rp 2 miliar per nasabah per bank. Diversifikasikan deposito ke beberapa bank jika investasi Anda melebihi limit jaminan.</p>
+                    </div>
+                </div>
+                
+                <div class="recommendation-point">
+                    <div class="point-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="point-content">
+                        <h4>Tips Praktis 2025</h4>
+                        <p id="tipsRecommendation">Negosiasikan suku bunga untuk deposito di atas Rp 500 juta. Manfaatkan promo bank digital untuk rate spesial. Pertimbangkan deposito berjangka berbeda untuk staggered maturity (jatuh tempo bertahap) yang memberikan likuiditas reguler.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p style="font-weight: 600; color: #2c3e50; margin-bottom: 10px;">&copy; 2025 Kalkulator Deposito Bank Indonesia</p>
+            <p style="color: #666666; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">Data suku bunga berdasarkan survei Bank Indonesia dan OJK Q1 2025. Hasil perhitungan adalah estimasi dan dapat berubah sesuai kebijakan bank masing-masing.</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-shield-alt"></i> Perlindungan LPS</a>
+                <a href="#"><i class="fas fa-file-contract"></i> Syarat & Ketentuan</a>
+                <a href="#"><i class="fas fa-chart-bar"></i> Data BI 2025</a>
+                <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
+                <a href="#"><i class="fas fa-envelope"></i> Kontak</a>
+                <a href="#"><i class="fas fa-download"></i> Download Laporan</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Data bank Indonesia 2025
+        const banksData = [
+            {
+                id: 1,
+                name: "BCA Digital",
+                type: "digital",
+                rate: 5.2,
+                period: "1-12 bulan",
+                minDeposit: 1000000,
+                featured: true,
+                color: "#1a6dcc",
+                icon: "fas fa-mobile-alt",
+                description: "Bank digital dengan aplikasi terbaik"
+            },
+            {
+                id: 2,
+                name: "Bank Jago",
+                type: "digital",
+                rate: 5.8,
+                period: "3-12 bulan",
+                minDeposit: 1000000,
+                featured: true,
+                color: "#00a86b",
+                icon: "fas fa-piggy-bank",
+                description: "Tingkat bunga kompetitif"
+            },
+            {
+                id: 3,
+                name: "SeaBank Indonesia",
+                type: "digital",
+                rate: 5.7,
+                period: "1-12 bulan",
+                minDeposit: 1000000,
+                featured: true,
+                color: "#00a8ff",
+                icon: "fas fa-anchor",
+                description: "Bank digital dari Sea Group"
+            },
+            {
+                id: 4,
+                name: "Bank Neo Commerce",
+                type: "digital",
+                rate: 5.5,
+                period: "1-24 bulan",
+                minDeposit: 1000000,
+                featured: false,
+                color: "#ff6b6b",
+                icon: "fas fa-bolt",
+                description: "Deposito fleksibel"
+            },
+            {
+                id: 5,
+                name: "Bank Mandiri",
+                type: "bumn",
+                rate: 5.3,
+                period: "1-36 bulan",
+                minDeposit: 5000000,
+                featured: false,
+                color: "#005b8c",
+                icon: "fas fa-landmark",
+                description: "Bank BUMN terbesar"
+            },
+            {
+                id: 6,
+                name: "Bank BRI",
+                type: "bumn",
+                rate: 5.4,
+                period: "1-24 bulan",
+                minDeposit: 5000000,
+                featured: false,
+                color: "#004a7c",
+                icon: "fas fa-university",
+                description: "Bank BUMN nasional"
+            },
+            {
+                id: 7,
+                name: "Bank BNI",
+                type: "bumn",
+                rate: 5.2,
+                period: "1-36 bulan",
+                minDeposit: 5000000,
+                featured: false,
+                color: "#e31837",
+                icon: "fas fa-building",
+                description: "Bank BUMN terpercaya"
+            },
+            {
+                id: 8,
+                name: "Bank BTN",
+                type: "bumn",
+                rate: 5.6,
+                period: "3-24 bulan",
+                minDeposit: 1000000,
+                featured: false,
+                color: "#ff6b00",
+                icon: "fas fa-home",
+                description: "Spesialis perumahan"
+            },
+            {
+                id: 9,
+                name: "Bank CIMB Niaga",
+                type: "konvensional",
+                rate: 5.0,
+                period: "1-12 bulan",
+                minDeposit: 5000000,
+                featured: false,
+                color: "#ed1c24",
+                icon: "fas fa-chart-line",
+                description: "Bank swasta nasional"
+            },
+            {
+                id: 10,
+                name: "Bank Danamon",
+                type: "konvensional",
+                rate: 4.8,
+                period: "1-24 bulan",
+                minDeposit: 5000000,
+                featured: false,
+                color: "#00a3e0",
+                icon: "fas fa-shield-alt",
+                description: "Bank swasta terkemuka"
+            },
+            {
+                id: 11,
+                name: "Bank Panin",
+                type: "konvensional",
+                rate: 5.1,
+                period: "1-36 bulan",
+                minDeposit: 10000000,
+                featured: false,
+                color: "#0033a0",
+                icon: "fas fa-gem",
+                description: "Bank swasta premium"
+            },
+            {
+                id: 12,
+                name: "Bank BCA",
+                type: "konvensional",
+                rate: 4.9,
+                period: "1-24 bulan",
+                minDeposit: 10000000,
+                featured: false,
+                color: "#0a4d9c",
+                icon: "fas fa-credit-card",
+                description: "Bank swasta terbesar"
+            },
+            {
+                id: 13,
+                name: "Bank Muamalat",
+                type: "syariah",
+                rate: 5.4,
+                period: "1-24 bulan",
+                minDeposit: 1000000,
+                featured: false,
+                color: "#009639",
+                icon: "fas fa-star-and-crescent",
+                description: "Bank syariah pertama"
+            },
+            {
+                id: 14,
+                name: "Bank Mega Syariah",
+                type: "syariah",
+                rate: 5.2,
+                period: "3-24 bulan",
+                minDeposit: 5000000,
+                featured: false,
+                color: "#8a2be2",
+                icon: "fas fa-mosque",
+                description: "Bank syariah terpercaya"
+            },
+            {
+                id: 15,
+                name: "Bank BSI (Bank Syariah Indonesia)",
+                type: "syariah",
+                rate: 5.5,
+                period: "1-36 bulan",
+                minDeposit: 1000000,
+                featured: true,
+                color: "#00a99d",
+                icon: "fas fa-hands-helping",
+                description: "Bank syariah terbesar"
+            },
+            {
+                id: 16,
+                name: "Bank OCBC NISP",
+                type: "konvensional",
+                rate: 5.0,
+                period: "1-12 bulan",
+                minDeposit: 5000000,
+                featured: false,
+                color: "#ff0000",
+                icon: "fas fa-globe-asia",
+                description: "Bank internasional"
+            },
+            {
+                id: 17,
+                name: "Bank Permata",
+                type: "konvensional",
+                rate: 5.1,
+                period: "1-24 bulan",
+                minDeposit: 5000000,
+                featured: false,
+                color: "#6a0dad",
+                icon: "fas fa-leaf",
+                description: "Bank swasta berkualitas"
+            },
+            {
+                id: 18,
+                name: "Bank DKI",
+                type: "bumn",
+                rate: 5.7,
+                period: "1-12 bulan",
+                minDeposit: 1000000,
+                featured: false,
+                color: "#0082c8",
+                icon: "fas fa-city",
+                description: "Bank pemerintah DKI"
+            }
+        ];
+
+        // Format angka ke Rupiah
+        function formatRupiah(angka) {
+            return new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(angka);
+        }
+
+        // Format persentase
+        function formatPercent(angka) {
+            return angka.toFixed(1) + '%';
+        }
+
+        // Hitung statistik bank
+        function calculateBankStats() {
+            const rates = banksData.map(bank => bank.rate);
+            const avgRate = rates.reduce((a, b) => a + b, 0) / rates.length;
+            const highestRate = Math.max(...rates);
+            const lowestRate = Math.min(...rates);
+            
+            document.getElementById('avgRate').textContent = formatPercent(avgRate);
+            document.getElementById('highestRate').textContent = formatPercent(highestRate);
+            document.getElementById('lowestRate').textContent = formatPercent(lowestRate);
+            document.getElementById('bankCount').textContent = banksData.length;
+        }
+
+        // Render bank cards
+        function renderBanks(filter = 'all') {
+            const banksGrid = document.getElementById('banksGrid');
+            banksGrid.innerHTML = '';
+            
+            const filteredBanks = filter === 'all' 
+                ? banksData 
+                : banksData.filter(bank => bank.type === filter);
+            
+            // Sort by rate (highest first)
+            filteredBanks.sort((a, b) => b.rate - a.rate);
+            
+            filteredBanks.forEach(bank => {
+                const bankCard = document.createElement('div');
+                bankCard.className = `bank-card ${bank.featured ? 'featured' : ''}`;
+                bankCard.setAttribute('data-rate', bank.rate);
+                bankCard.setAttribute('data-type', bank.type);
+                
+                bankCard.innerHTML = `
+                    <div class="bank-header">
+                        <div class="bank-icon" style="background: ${bank.color}">
+                            <i class="${bank.icon}"></i>
+                        </div>
+                        <div class="bank-name-container">
+                            <div class="bank-name">${bank.name}</div>
+                            <span class="bank-type">${getBankTypeLabel(bank.type)}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bank-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Suku Bunga</div>
+                            <div class="detail-value rate">${formatPercent(bank.rate)}</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Jangka Waktu</div>
+                            <div class="detail-value">${bank.period}</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Minimal Deposito</div>
+                            <div class="detail-value">${formatRupiah(bank.minDeposit)}</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipe</div>
+                            <div class="detail-value">${getBankTypeLabel(bank.type)}</div>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #666666; line-height: 1.5;">${bank.description}</p>
+                    
+                    <div class="bank-footer">
+                        <button class="apply-btn" onclick="applyBankRate(${bank.rate}, '${bank.name}')">
+                            <i class="fas fa-check-circle"></i> Gunakan Rate Ini
+                        </button>
+                        <span style="font-size: 0.85rem; color: #27ae60; font-weight: 600;">
+                            <i class="fas fa-shield-alt"></i> Dijamin LPS
+                        </span>
+                    </div>
+                `;
+                
+                banksGrid.appendChild(bankCard);
+            });
+        }
+
+        // Get bank type label
+        function getBankTypeLabel(type) {
+            const labels = {
+                'digital': 'Bank Digital',
+                'konvensional': 'Bank Konvensional',
+                'syariah': 'Bank Syariah',
+                'bumn': 'Bank BUMN'
+            };
+            return labels[type] || type;
+        }
+
+        // Apply bank rate to calculator
+        function applyBankRate(rate, bankName) {
+            document.getElementById('interestRate').value = rate;
+            document.getElementById('interestRateRange').value = rate;
+            document.getElementById('interestRateValue').textContent = formatPercent(rate);
+            
+            // Show notification
+            showNotification(`Rate ${formatPercent(rate)} dari ${bankName} telah diterapkan`);
+            
+            // Calculate with new rate
+            calculateDeposit();
+        }
+
+        // Show notification
+        function showNotification(message) {
+            // Remove existing notification
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            // Create new notification
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <div style="position: fixed; top: 100px; right: 20px; background: #27ae60; color: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000; display: flex; align-items: center; gap: 10px; font-weight: 600;">
+                    <i class="fas fa-check-circle"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Update nilai slider dan input
+        function setupRangeInputs() {
+            // Deposit amount
+            const depositInput = document.getElementById('depositAmount');
+            const depositRange = document.getElementById('depositAmountRange');
+            const depositValue = document.getElementById('depositAmountValue');
+            
+            function updateDeposit(value) {
+                const numValue = parseInt(value);
+                depositInput.value = numValue;
+                depositRange.value = numValue;
+                depositValue.textContent = formatRupiah(numValue);
+            }
+            
+            depositInput.addEventListener('input', () => updateDeposit(depositInput.value));
+            depositRange.addEventListener('input', () => updateDeposit(depositRange.value));
+            
+            // Interest rate
+            const interestInput = document.getElementById('interestRate');
+            const interestRange = document.getElementById('interestRateRange');
+            const interestValue = document.getElementById('interestRateValue');
+            
+            function updateInterest(value) {
+                const numValue = parseFloat(value);
+                interestInput.value = numValue;
+                interestRange.value = numValue;
+                interestValue.textContent = formatPercent(numValue);
+            }
+            
+            interestInput.addEventListener('input', () => updateInterest(interestInput.value));
+            interestRange.addEventListener('input', () => updateInterest(interestRange.value));
+            
+            // Period
+            const periodSelect = document.getElementById('period');
+            const periodRange = document.getElementById('periodRange');
+            const periodValue = document.getElementById('periodValue');
+            
+            function updatePeriod(value) {
+                const numValue = parseInt(value);
+                periodSelect.value = numValue;
+                periodRange.value = numValue;
+                periodValue.textContent = numValue + ' Bulan';
+            }
+            
+            periodSelect.addEventListener('change', () => updatePeriod(periodSelect.value));
+            periodRange.addEventListener('input', () => updatePeriod(periodRange.value));
+        }
+
+        // Fungsi perhitungan bunga majemuk
+        function calculateCompoundInterest(principal, rate, time, compoundsPerYear) {
+            const rateDecimal = rate / 100;
+            const amount = principal * Math.pow(1 + rateDecimal / compoundsPerYear, compoundsPerYear * (time / 12));
+            return amount - principal;
+        }
+
+        // Hitung deposito
+        function calculateDeposit() {
+            // Ambil nilai input
+            const depositAmount = parseInt(document.getElementById('depositAmount').value);
+            const interestRate = parseFloat(document.getElementById('interestRate').value);
+            const period = parseInt(document.getElementById('period').value);
+            const taxRate = parseInt(document.getElementById('taxRate').value);
+            const compounding = document.getElementById('compounding').value;
+            
+            // Tentukan frekuensi compounding
+            let compoundsPerYear = 1;
+            let interestBeforeTax = 0;
+            
+            if (compounding === 'simple') {
+                // Bunga tunggal
+                const periodInYears = period / 12;
+                interestBeforeTax = depositAmount * (interestRate / 100) * periodInYears;
+            } else {
+                // Bunga majemuk
+                switch(compounding) {
+                    case 'monthly':
+                        compoundsPerYear = 12;
+                        break;
+                    case 'quarterly':
+                        compoundsPerYear = 4;
+                        break;
+                    case 'annually':
+                        compoundsPerYear = 1;
+                        break;
+                }
+                interestBeforeTax = calculateCompoundInterest(depositAmount, interestRate, period, compoundsPerYear);
+            }
+            
+            // Hitung pajak
+            const taxAmount = interestBeforeTax * (taxRate / 100);
+            
+            // Hitung bunga setelah pajak
+            const interestAfterTax = interestBeforeTax - taxAmount;
+            
+            // Hitung total
+            const totalReturn = depositAmount + interestAfterTax;
+            const netProfit = interestAfterTax;
+            
+            // Update hasil
+            document.getElementById('resultDeposit').textContent = formatRupiah(depositAmount);
+            document.getElementById('resultAnnualInterest').textContent = formatRupiah(depositAmount * (interestRate / 100));
+            document.getElementById('resultTotalInterest').textContent = formatRupiah(interestBeforeTax);
+            document.getElementById('resultTax').textContent = formatRupiah(taxAmount);
+            document.getElementById('resultTotalReturn').textContent = formatRupiah(totalReturn);
+            document.getElementById('netProfit').textContent = formatRupiah(netProfit);
+            
+            // Generate chart yang diperbaiki
+            generateGrowthChart(depositAmount, totalReturn, period);
+            
+            // Update rekomendasi keuangan
+            updateFinancialRecommendation(depositAmount, interestRate, period, netProfit);
+        }
+
+        // Generate chart pertumbuhan yang diperbaiki
+        function generateGrowthChart(initial, final, period) {
+            const chart = document.getElementById('growthChart');
+            chart.innerHTML = '';
+            
+            // Tentukan jumlah titik berdasarkan periode
+            let dataPoints = [];
+            
+            if (period <= 6) {
+                // Untuk periode pendek, tampilkan semua bulan
+                for (let i = 0; i <= period; i += Math.max(1, Math.floor(period/3))) {
+                    const months = i;
+                    const value = initial + (final - initial) * (months / period);
+                    dataPoints.push({ months, value, label: months === 0 ? 'Awal' : `${months} Bulan` });
+                }
+            } else {
+                // Untuk periode lebih panjang, tampilkan titik penting
+                dataPoints.push({ months: 0, value: initial, label: 'Awal' });
+                
+                if (period >= 6) {
+                    const midValue1 = initial + (final - initial) * (6 / period);
+                    dataPoints.push({ months: 6, value: midValue1, label: '6 Bulan' });
+                }
+                
+                if (period >= 12 && period !== 6) {
+                    const midValue2 = initial + (final - initial) * (12 / period);
+                    dataPoints.push({ months: 12, value: midValue2, label: '12 Bulan' });
+                }
+                
+                if (period >= 24) {
+                    const midValue3 = initial + (final - initial) * (24 / period);
+                    dataPoints.push({ months: 24, value: midValue3, label: '24 Bulan' });
+                }
+                
+                // Tambahkan akhir
+                dataPoints.push({ months: period, value: final, label: `${period} Bulan` });
+            }
+            
+            // Cari nilai maksimum untuk scaling
+            const maxValue = Math.max(...dataPoints.map(d => d.value));
+            
+            // Buat bar chart dengan label yang jelas
+            dataPoints.forEach((point, index) => {
+                const barHeight = (point.value / maxValue) * 100;
+                
+                const barContainer = document.createElement('div');
+                barContainer.className = 'chart-bar-container';
+                
+                const bar = document.createElement('div');
+                bar.className = 'chart-bar';
+                bar.style.height = `${barHeight}%`;
+                bar.setAttribute('title', `Nilai: ${formatRupiah(point.value)}`);
+                
+                // Tambahkan nilai di atas bar
+                const barValue = document.createElement('div');
+                barValue.className = 'bar-value';
+                barValue.textContent = formatRupiah(point.value);
+                bar.appendChild(barValue);
+                
+                // Tambahkan label di bawah bar
+                const barLabel = document.createElement('div');
+                barLabel.className = 'chart-label';
+                barLabel.textContent = point.label;
+                
+                barContainer.appendChild(bar);
+                barContainer.appendChild(barLabel);
+                chart.appendChild(barContainer);
+            });
+        }
+
+        // Update rekomendasi keuangan
+        function updateFinancialRecommendation(amount, rate, period, profit) {
+            // Analisis berdasarkan rate
+            const ratesByType = {
+                digital: banksData.filter(b => b.type === 'digital').map(b => b.rate),
+                konvensional: banksData.filter(b => b.type === 'konvensional').map(b => b.rate),
+                syariah: banksData.filter(b => b.type === 'syariah').map(b => b.rate),
+                bumn: banksData.filter(b => b.type === 'bumn').map(b => b.rate)
+            };
+            
+            const avgDigital = ratesByType.digital.reduce((a, b) => a + b, 0) / ratesByType.digital.length;
+            const avgKonvensional = ratesByType.konvensional.reduce((a, b) => a + b, 0) / ratesByType.konvensional.length;
+            const avgSyariah = ratesByType.syariah.reduce((a, b) => a + b, 0) / ratesByType.syariah.length;
+            const avgBumn = ratesByType.bumn.reduce((a, b) => a + b, 0) / ratesByType.bumn.length;
+            
+            let rateRecommendation = `Berdasarkan data 18 bank Indonesia tahun 2025, rata-rata suku bunga deposito adalah: Bank Digital ${formatPercent(avgDigital)}, Bank BUMN ${formatPercent(avgBumn)}, Bank Syariah ${formatPercent(avgSyariah)}, Bank Konvensional ${formatPercent(avgKonvensional)}. `;
+            
+            if (rate < avgDigital) {
+                rateRecommendation += `Rate Anda ${formatPercent(rate)} lebih rendah dari rata-rata bank digital. Pertimbangkan pindah ke bank digital untuk rate lebih tinggi.`;
+            } else if (rate > avgDigital) {
+                rateRecommendation += `Rate Anda ${formatPercent(rate)} sangat kompetitif, lebih tinggi dari rata-rata bank digital!`;
+            } else {
+                rateRecommendation += `Rate Anda ${formatPercent(rate)} sesuai dengan rata-rata pasar.`;
+            }
+            
+            document.getElementById('rateRecommendation').textContent = rateRecommendation;
+            
+            // Analisis berdasarkan periode
+            let periodRecommendation = `Untuk deposito Rp ${formatRupiah(amount).replace('Rp', '')}, `;
+            
+            if (period <= 3) {
+                periodRecommendation += `jangka waktu ${period} bulan cocok untuk dana darurat namun memberikan imbal hasil rendah. Untuk investasi optimal, pertimbangkan 12-24 bulan.`;
+            } else if (period <= 12) {
+                periodRecommendation += `jangka waktu ${period} bulan memberikan keseimbangan baik antara likuiditas dan imbal hasil. Ideal untuk tujuan keuangan 1-2 tahun.`;
+            } else {
+                periodRecommendation += `jangka waktu ${period} bulan optimal untuk investasi jangka panjang. Pastikan Anda tidak membutuhkan dana ini dalam waktu dekat.`;
+            }
+            
+            document.getElementById('periodRecommendation').textContent = periodRecommendation;
+            
+            // Analisis berdasarkan jumlah
+            let riskRecommendation = `Dengan investasi ${formatRupiah(amount)}, `;
+            
+            if (amount > 2000000000) {
+                riskRecommendation += `Anda melebihi limit jaminan LPS Rp 2 miliar. Sangat disarankan untuk mendiversifikasikan ke beberapa bank. Deposit maksimal Rp 2 miliar per bank untuk perlindungan optimal.`;
+            } else if (amount > 500000000) {
+                riskRecommendation += `Anda mendekati limit jaminan LPS. Pertimbangkan split deposito ke 2-3 bank berbeda untuk perlindungan maksimal dan negosiasi rate lebih baik.`;
+            } else {
+                riskRecommendation += `investasi Anda sepenuhnya terlindungi oleh LPS. Pastikan bank pilihan Anda adalah peserta penjaminan LPS yang aktif.`;
+            }
+            
+            document.getElementById('riskRecommendation').textContent = riskRecommendation;
+            
+            // Tips praktis
+            let tipsRecommendation = `Untuk meningkatkan keuntungan: `;
+            const tips = [];
+            
+            if (amount > 500000000) {
+                tips.push("Negosiasikan suku bunga dengan relationship manager bank");
+            }
+            
+            if (rate < avgDigital) {
+                tips.push("Pertimbangkan beralih ke bank digital untuk rate lebih tinggi");
+            }
+            
+            if (period <= 6) {
+                tips.push("Evaluasi apakah Anda benar-benar butuh likuiditas tinggi atau bisa memperpanjang jangka waktu");
+            }
+            
+            tips.push("Manfaatkan promo deposito baru yang sering ditawarkan bank digital");
+            tips.push("Pertimbangkan staggered maturity dengan membagi deposito ke beberapa jangka waktu");
+            
+            tipsRecommendation += tips.join(". ") + ".";
+            
+            document.getElementById('tipsRecommendation').textContent = tipsRecommendation;
+        }
+
+        // Setup bank filter
+        function setupBankFilter() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    // Render banks with filter
+                    renderBanks(button.getAttribute('data-filter'));
+                });
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            setupRangeInputs();
+            setupBankFilter();
+            
+            // Hitung statistik bank
+            calculateBankStats();
+            
+            // Render bank cards
+            renderBanks('all');
+            
+            // Hitung saat pertama kali dimuat
+            calculateDeposit();
+            
+            // Event listener untuk tombol hitung
+            document.getElementById('calculateBtn').addEventListener('click', calculateDeposit);
+            
+            // Event listener untuk perubahan input
+            document.getElementById('taxRate').addEventListener('change', calculateDeposit);
+            document.getElementById('compounding').addEventListener('change', calculateDeposit);
+            
+            // Auto calculate saat input berubah
+            ['depositAmount', 'interestRate', 'period'].forEach(id => {
+                document.getElementById(id).addEventListener('input', calculateDeposit);
+            });
+        });
+    </script>
+</body>
+</html>
